@@ -1,4 +1,4 @@
 
 public enum Type {
-	LIGHT,DARK
+	LIGHT,DARK,FIRE
 }

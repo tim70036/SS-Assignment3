@@ -24,7 +24,7 @@ public class GameStage extends JFrame implements Runnable{
 		// TODO Auto-generated method stub
 		// Selecting Character
 		int mType=JOptionPane.INFORMATION_MESSAGE;
-		String[] option = {"Pica", "Poo"};
+		String[] option = {"Pica", "Poo", "FatGuy"};
 		String p1, p2;
 		p1 = (String)JOptionPane.showInputDialog(this,"Please choose first player's character","Choose",mType,null,option,"Pica");
 		p2 = (String)JOptionPane.showInputDialog(this,"Please choose first player's character","Choose",mType,null,option,"Pica");
@@ -98,6 +98,7 @@ public class GameStage extends JFrame implements Runnable{
 		AbstractCharacter re = null;
 		if(c.equals("Pica"))	re = new Pica(this);
 		else if(c.equals("Poo")) re = new Poo(this);
+		else if(c.equals("FatGuy")) re = new FatGuy(this);
 		return re;	
 	}
 }

@@ -1,13 +1,15 @@
-import java.util.*;
-import javax.swing.*;
-public class ShockSkill extends AbstractSkill {
+import java.util.Random;
 
-	ShockSkill()
+import javax.swing.JOptionPane;
+
+public class HotDogSkill extends AbstractSkill {
+
+	HotDogSkill()
 	{
-		setType(Type.LIGHT);
-		setPower(100);
-		setAccuracy(80);
-		name = "Shock";
+		setType(Type.FIRE);
+		setPower(180);
+		setAccuracy(30);
+		name = "HotDog";
 	}
 	@Override
 	public void launch(AbstractCharacter ch) {
@@ -44,5 +46,4 @@ public class ShockSkill extends AbstractSkill {
 		// TODO Auto-generated method stub
 		return name;
 	}
-
 }

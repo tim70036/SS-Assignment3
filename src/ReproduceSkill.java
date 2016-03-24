@@ -33,7 +33,7 @@ public class ReproduceSkill extends AbstractSkill {
 				damage = (int)(getPower() * effect * mul);
 				
 				// Show message
-				String message = "You use Shock and cause " + damage + "damage !";
+				String message = "You use " + name + " and cause " + damage + "damage !";
 				if(effect == 0)	message = "Enemy avoid the skill ! No damage...";
 				JOptionPane.showMessageDialog(ch.gs,message);
 				
