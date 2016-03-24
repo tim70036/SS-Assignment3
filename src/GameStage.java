@@ -37,6 +37,8 @@ public class GameStage extends JFrame implements Runnable{
 	@Override
 	public void run(){
 		// TODO Auto-generated method stub
+		// Selecting Character
+		
 		int isEnding = 0,turn = 0;
 		int state = 0;
 		while(isEnding == 0){
