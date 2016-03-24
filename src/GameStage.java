@@ -16,13 +16,29 @@ public class GameStage extends JFrame implements Runnable{
 		setLocation(100,100);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		setVisible(true);
+	}
+	@Override
+	public void run(){
+		// TODO Auto-generated method stub
+		// Selecting Character
+		int mType=JOptionPane.INFORMATION_MESSAGE;
+		String[] option = {"Pica", "Poo"};
+		String p1, p2;
+		p1 = (String)JOptionPane.showInputDialog(this,"Please choose first player's character","Choose",mType,null,option,"Pica");
+		p2 = (String)JOptionPane.showInputDialog(this,"Please choose first player's character","Choose",mType,null,option,"Pica");
+		
+		
 		charaList = new AbstractCharacter[2];
-		charaList[0] = new Pica(this);
+		charaList[0] = choose(p1);
+		charaList[1] = choose(p2);
+		
+		// Initialize
 		charaList[0].initial();
 		ch1 = new CharacterPanel(charaList[0],this);
 		ch1.setBounds(0, 0, 500, 500);
 		add(ch1);
-		charaList[1] = new Poo(this);
 		charaList[1].initial();
 		ch2 = new CharacterPanel(charaList[1],this);
 		ch2.setBounds(500,0,500,500);
@@ -32,12 +48,6 @@ public class GameStage extends JFrame implements Runnable{
 		charaList[1].disActive();
 		ch1.update();
 		ch2.update();
-		setVisible(true);
-	}
-	@Override
-	public void run(){
-		// TODO Auto-generated method stub
-		// Selecting Character
 		
 		int isEnding = 0,turn = 0;
 		int state = 0;
@@ -81,5 +91,13 @@ public class GameStage extends JFrame implements Runnable{
 	}
 	public void setSkill(int num){
 		skill = num;
+	}
+	
+	public AbstractCharacter choose(String c)
+	{
+		AbstractCharacter re = null;
+		if(c.equals("Pica"))	re = new Pica(this);
+		else if(c.equals("Poo")) re = new Poo(this);
+		return re;	
 	}
 }
