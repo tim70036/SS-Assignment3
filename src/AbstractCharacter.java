@@ -11,6 +11,10 @@ public abstract class AbstractCharacter {
 	private BufferedImage image;
 	protected GameStage gs;
 	
+	// 1 for left, 2 for right
+	protected int position;
+	public void setPosition(int i){position = i;}
+	public int getPostion(){return position;}
 	protected String name;
 	public void setName(String s){name = s;}
 	abstract public String getName();	//return the name of the character

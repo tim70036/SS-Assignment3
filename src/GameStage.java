@@ -33,10 +33,12 @@ public class GameStage extends JFrame implements Runnable{
 		charaList = new AbstractCharacter[2];
 		charaList[0] = choose(p1);
 		charaList[1] = choose(p2);
+		charaList[0].setPosition(1);
+		charaList[1].setPosition(2);
 		
 		// Initialize
 		charaList[0].initial();
-		ch1 = new CharacterPanel(charaList[0],this);
+		ch1 = new CharacterPanel(charaList[0],this);		
 		ch1.setBounds(0, 0, 500, 500);
 		add(ch1);
 		charaList[1].initial();

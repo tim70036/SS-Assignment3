@@ -1,4 +1,4 @@
-
+import java.awt.Image;
 
 public abstract class AbstractSkill {
 	private int power,accuracy;
@@ -8,6 +8,10 @@ public abstract class AbstractSkill {
 	abstract public void launch(AbstractCharacter ch);
 	abstract public String getName();
 	protected String name;
+	protected Image image;
+	public Image getImage(){return image;}
+	public void setImage(Image i){image = i;}
+	protected int x,y;
 	
 	public void setType(Type t){
 		type = t;
