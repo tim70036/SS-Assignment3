@@ -24,7 +24,7 @@ public class GameStage extends JFrame implements Runnable{
 		// TODO Auto-generated method stub
 		// Selecting Character
 		int mType=JOptionPane.INFORMATION_MESSAGE;
-		String[] option = {"Pica", "Poo", "FatGuy"};
+		String[] option = {"Pica 生命：中 命中率：高 傷害：低(Light)", "Poo 生命：低 命中率：中 傷害：高(Dark)", "FatGuy 生命：高 命中率：低 傷害：高(Fire)"};
 		String p1, p2;
 		p1 = (String)JOptionPane.showInputDialog(this,"Please choose first player's character","Choose",mType,null,option,"Pica");
 		p2 = (String)JOptionPane.showInputDialog(this,"Please choose first player's character","Choose",mType,null,option,"Pica");
@@ -98,9 +98,9 @@ public class GameStage extends JFrame implements Runnable{
 	public AbstractCharacter choose(String c)
 	{
 		AbstractCharacter re = null;
-		if(c.equals("Pica"))	re = new Pica(this);
-		else if(c.equals("Poo")) re = new Poo(this);
-		else if(c.equals("FatGuy")) re = new FatGuy(this);
+		if(c.equals("Pica 生命：中 命中率：高 傷害：低(Light)"))	re = new Pica(this);
+		else if(c.equals("Poo 生命：低 命中率：中 傷害：高(Dark)")) re = new Poo(this);
+		else if(c.equals("FatGuy 生命：高 命中率：低 傷害：高(Fire)")) re = new FatGuy(this);
 		return re;	
 	}
 }
